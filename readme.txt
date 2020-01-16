@@ -1,7 +1,7 @@
 
-This program is designed for the Heiligkreuztal Retreat run by GTC.
+This program is designed for an annual retreat run by GTC.
 
-This program addresses the problem of assigning papers to students for the HKT retreat presentations. 
+It addresses the problem of assigning papers to students for the HKT retreat presentations. 
 Students indicate which papers and general categories interest them in a Google form. 
 Each student chooses five papers and ranks them based on their preferences. Additionally, each student ranks the categories
 based on their preferences. The program will try to find the assignment of papers to students that maximizes the overall
@@ -88,7 +88,7 @@ Number of full-algorithm repeats (default 50)
 Make sure Google form spelling matches code.. mainly for category options e.g. "Choice 1"
 Let people know to rank 5 papers and all categories, even if they want fewer - results with fewer rankings are
 untested
-Double-check the number of papers per category as input to the sorting hat (errors crash the program)
+Double-check the number of papers per category as input to the sorting hat
 Make sure this input (# papers per category) is entered in the same order as in the form
 
 --------------output file------------------------------------
