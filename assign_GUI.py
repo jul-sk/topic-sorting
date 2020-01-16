@@ -87,10 +87,16 @@ class MainWindow(QWidget):
         def runSort():
             input_file = textbox_in.text()
             output_file = textbox_out.text()
-            n1 = cat1_num.text()
-            n2 = cat2_num.text()
-            n3 = cat3_num.text()
+            n1 = int(cat1_num.text())
+            n2 = int(cat2_num.text())
+            n3 = int(cat3_num.text())
             section_counts = [n1,n2,n3]
+            
+            f = open(input_file, "r")
+            lines = f.readlines()
+            if sum(section_counts) != len(lines[0].split(',')[5:]):
+                print('category counts do not sum up to total options from input file')
+                return
             paper_assign(str(input_file), str(output_file), section_counts,
                          population_size=int(popReadout.text()), 
                          num_iterations=int(iterReadout.text()),
@@ -180,8 +186,6 @@ class MainWindow(QWidget):
         self.setWindowTitle('HKT Paper Sorting')
         self.setWindowIcon(QIcon('sort-hat.ico'))        
         self.show()
-
-#Definition : addWidget(self, QWidget, stretch: int=0, alignment: Union[Qt.Alignment, Qt.AlignmentFlag]=0)
 
 if __name__ == '__main__':
         
